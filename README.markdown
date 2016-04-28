@@ -29,6 +29,9 @@ The key aspects being:
   making a new `.mk` file for them
 * makefiles are explicitly versioned so we can keep track of them and
   automatically update them across projects
+* if you've included the `make.mk` file, you can do `make
+  update_makefiles` and it will update every `.mk` file in your app to
+  the version that is current in this repo.
 
 ## Guidelines for writing make targets
 
@@ -100,3 +103,11 @@ Optional:
 * `JS_SENTINAL`, location of the js sentinal file, default `$(NODE_MODULES)/sentinal`
 * `JSHINT`, jshint command, default `$(NODE_MODULES)/jshint/bin/jshint`
 * `JSCS`, jscs command, default `$(NODE_MODULES)/jscs/bin/jscs`
+
+### make.mk
+
+Optional:
+
+* `GITHUB_BASE`, where to look for new versions, default https://raw.githubusercontent.com/ccnmtl/makefiles/master/
+* `WGET`, wget binary, default `wget`
+* `WGET_FLAGS`, flags for wget command, default `-O`
