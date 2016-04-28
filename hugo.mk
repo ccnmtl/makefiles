@@ -1,3 +1,4 @@
+# VERSION=1.0.0
 HUGO ?= /usr/local/bin/hugo
 S3CMD ?= s3cmd
 PUBLIC ?= public
