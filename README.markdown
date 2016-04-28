@@ -41,7 +41,9 @@ The key aspects being:
   overridden in the top-level `Makefile` or on the commandline
 * if you change something, bump the `VERSION` in the comment on the
   first line as appropriate (semver rules)
-  * update this README with documentation of variables required below
+* update this README with documentation of variables required below
+* add a changelog comment to the file you've changed, especially if
+  something potentially is not backwards compatible
 
 ## Expected variables
 
