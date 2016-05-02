@@ -1,4 +1,8 @@
-# VERSION=1.0.0
+# VERSION=1.0.1
+
+# CHANGES:
+# 1.0.1 - 2016-05-02 - Remove deprecated syncdb command from make install
+
 VE ?= ./ve
 MANAGE ?= ./manage.py
 FLAKE8 ?= $(VE)/bin/flake8
