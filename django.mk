@@ -75,7 +75,6 @@ rebase:
 # to run it after that, though.
 install: jenkins
 	createdb $(APP)
-	$(MANAGE) syncdb --noinput
 	make migrate
 
 .PHONY: jenkins test flake8 runserver migrate check shell clean pull rebase install
