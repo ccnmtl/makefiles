@@ -1,12 +1,11 @@
 # VERSION=1.0.0
 # Assumes drush and phpcs are installed. Use composer for this.
 
-PHP ?= php
 DRUSH ?= drush
 PHPCS ?= phpcs
 
 runserver:
-	$(PHP) -S 0.0.0.0:8000
+	$(DRUSH) runserver
 
 migrate:
 	$(DRUSH) updb
