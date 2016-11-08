@@ -1,6 +1,7 @@
-# VERSION=1.0.1
+# VERSION=1.1.0
 
 # CHANGES:
+# 1.1.0 - 2016-11-08 - run flake8 tests before unit tests
 # 1.0.1 - 2016-05-02 - Remove deprecated syncdb command from make install
 
 VE ?= ./ve
