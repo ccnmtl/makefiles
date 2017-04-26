@@ -100,11 +100,10 @@ Optional:
 
 Optional:
 
-* `JS_FILES`, where to look for jscs/jshint, defaults to `media/js`
+* `JS_FILES`, where to look for eslint, defaults to `media/js`
 * `NODE_MODULES`, node_modules dir, default `./node_modules`
 * `JS_SENTINAL`, location of the js sentinal file, default `$(NODE_MODULES)/sentinal`
-* `JSHINT`, jshint command, default `$(NODE_MODULES)/jshint/bin/jshint`
-* `JSCS`, jscs command, default `$(NODE_MODULES)/jscs/bin/jscs`
+* `ESLINT`, eslint command, default `$(NODE_MODULES)/eslint/bin/eslint`
 
 ### make.mk
 
