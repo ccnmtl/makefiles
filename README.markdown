@@ -62,7 +62,6 @@ Optional:
 * `SYS_PYTHON`, system python, default `python`
 * `PIP`, pip command, default `$(VE)/bin/pip`
 * `PY_SENTINAL`, python sentinal location, default `$(VE)/sentinal`
-* `PYPI_URL`, pypi mirror url, default `https://pypi.ccnmtl.columbia.edu/`
 * `WHEEL_VERSION`, version of python wheel library to install, default `0.24.0`
 * `VIRTUALENV`, location of embedded virtualenv.py, default `virtualenv.py`
 * `SUPPORT_DIR`, directory with support librarires, default `requirements/virtualenv_support/`
