@@ -50,9 +50,9 @@ docker-clean:
 	-docker stop $(PROJECT)-web
 	-docker stop $(PROJECT)-mysql
 	-docker stop $(PROJECT)-drush
-	-docker rm $(PROJECT)-web
-	-docker rm $(PROJECT)-web
 	-docker rm $(PROJECT)-drush
+	-docker rm $(PROJECT)-mysql
+	-docker rm $(PROJECT)-web
 
 .PHONY: check-env
 check-env:
