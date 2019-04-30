@@ -111,3 +111,11 @@ Optional:
 * `GITHUB_BASE`, where to look for new versions, default https://raw.githubusercontent.com/ccnmtl/makefiles/master/
 * `WGET`, wget binary, default `wget`
 * `WGET_FLAGS`, flags for wget command, default `-O`
+
+### drupal-docker.mk
+
+* `PROJECT`, sets the project name to be used for container names.
+* `DC_MYSQL_USER`, sets the MySQL username in the docker-compose and
+  in the local settings file.
+* `DC_MYSQL_PASSWORD`, sets the MySQL password in docker-compose and
+  in the local settings file.
