@@ -38,7 +38,7 @@ endif
 
 jenkins: check flake8 test eslint bandit
 
-$(PY_SENTINAL): $(REQUIREMENTS) $(VIRTUALENV)
+$(PY_SENTINAL): $(REQUIREMENTS)
 	rm -rf $(VE)
 	$(SYS_PYTHON) -m venv $(VE)
 	$(PIP) install pip==$(PIP_VERSION)
