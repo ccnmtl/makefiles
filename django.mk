@@ -31,10 +31,12 @@ ifeq ($(TRAVIS),true)
 	BANDIT ?= bandit
 	FLAKE8 ?= flake8
 	PIP ?= pip
+	COVERAGE ?= coverage
 else
 	BANDIT ?= $(VE)/bin/bandit
 	FLAKE8 ?= $(VE)/bin/flake8
 	PIP ?= $(VE)/bin/pip
+	COVERAGE ?= $(VE)/bin/coverage
 endif
 
 jenkins: check flake8 test eslint bandit
@@ -49,7 +51,8 @@ $(PY_SENTINAL): $(REQUIREMENTS)
 	touch $@
 
 test: $(PY_SENTINAL)
-	$(MANAGE) jenkins --pep8-exclude=migrations --enable-coverage --coverage-rcfile=.coveragerc
+	$(COVERAGE) run --source='.' $(MANAGE) test $(APP)
+	$(COVERAGE) xml -o reports/coverage.xml
 
 parallel-tests: $(PY_SENTINAL)
 	$(MANAGE) test --parallel
