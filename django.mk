@@ -1,6 +1,8 @@
 # VERSION=1.8.0
 
 # CHANGES:
+# 1.9.0              - Use coverage tool directly to generate coverage
+#                      reports.
 # 1.8.0 - 2019-10-21 - Don't run flake8 on local_settings.py
 # 1.7.0 - 2018-05-31 - Now using python 3 by default
 #                    - Removed virtualenv.py in favor of python 3's
