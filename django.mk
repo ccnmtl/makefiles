@@ -4,6 +4,7 @@
 # 1.9.0              - Use coverage tool directly to generate coverage
 #                      reports.
 #                    - wheel and pip updates
+#                    - Use pre-compiled binary wheel for cryptography
 # 1.8.0 - 2019-10-21 - Don't run flake8 on local_settings.py
 # 1.7.0 - 2018-05-31 - Now using python 3 by default
 #                    - Removed virtualenv.py in favor of python 3's
@@ -50,7 +51,7 @@ $(PY_SENTINAL): $(REQUIREMENTS)
 	$(PIP) install pip==$(PIP_VERSION)
 	$(PIP) install --upgrade setuptools
 	$(PIP) install wheel==$(WHEEL_VERSION)
-	$(PIP) install --no-deps --requirement $(REQUIREMENTS) --no-binary cryptography
+	$(PIP) install --no-deps --requirement $(REQUIREMENTS)
 	touch $@
 
 test: $(PY_SENTINAL)
