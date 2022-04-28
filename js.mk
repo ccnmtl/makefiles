@@ -1,7 +1,7 @@
 # VERSION=1.3.1
 
 # CHANGES:
-# 1.3.1 - conditional npm installation based on ENVIRONMENT var
+# 1.3.1 - conditionally install npm deps based on ENVIRONMENT var
 # 1.3.0 - restore eslint
 # 1.2.0 - restore jshint/jscs
 
