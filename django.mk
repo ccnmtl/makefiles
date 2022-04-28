@@ -28,22 +28,12 @@ MAX_COMPLEXITY ?= 10
 INTERFACE ?= localhost
 RUNSERVER_PORT ?= 8000
 PY_DIRS ?= $(APP)
+BANDIT ?= $(VE)/bin/bandit
+FLAKE8 ?= $(VE)/bin/flake8
+PIP ?= $(VE)/bin/pip
+COVERAGE ?= $(VE)/bin/coverage
 
-# Travis has issues here. See:
-# https://github.com/travis-ci/travis-ci/issues/9524
-ifeq ($(TRAVIS),true)
-	BANDIT ?= bandit
-	FLAKE8 ?= flake8
-	PIP ?= pip
-	COVERAGE ?= coverage
-else
-	BANDIT ?= $(VE)/bin/bandit
-	FLAKE8 ?= $(VE)/bin/flake8
-	PIP ?= $(VE)/bin/pip
-	COVERAGE ?= $(VE)/bin/coverage
-endif
-
-jenkins: check flake8 test eslint bandit
+jenkins: check flake8 test bandit eslint
 
 $(PY_SENTINAL): $(REQUIREMENTS)
 	rm -rf $(VE)
