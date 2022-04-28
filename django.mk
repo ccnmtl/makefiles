@@ -1,10 +1,11 @@
-# VERSION=1.8.0
+# VERSION=1.9.0
 
 # CHANGES:
 # 1.9.0              - Use coverage tool directly to generate coverage
 #                      reports.
 #                    - wheel and pip updates
 #                    - Use pre-compiled binary wheel for cryptography
+#                    - Remove Travis references
 # 1.8.0 - 2019-10-21 - Don't run flake8 on local_settings.py
 # 1.7.0 - 2018-05-31 - Now using python 3 by default
 #                    - Removed virtualenv.py in favor of python 3's
@@ -28,22 +29,12 @@ MAX_COMPLEXITY ?= 10
 INTERFACE ?= localhost
 RUNSERVER_PORT ?= 8000
 PY_DIRS ?= $(APP)
+BANDIT ?= $(VE)/bin/bandit
+FLAKE8 ?= $(VE)/bin/flake8
+PIP ?= $(VE)/bin/pip
+COVERAGE ?= $(VE)/bin/coverage
 
-# Travis has issues here. See:
-# https://github.com/travis-ci/travis-ci/issues/9524
-ifeq ($(TRAVIS),true)
-	BANDIT ?= bandit
-	FLAKE8 ?= flake8
-	PIP ?= pip
-	COVERAGE ?= coverage
-else
-	BANDIT ?= $(VE)/bin/bandit
-	FLAKE8 ?= $(VE)/bin/flake8
-	PIP ?= $(VE)/bin/pip
-	COVERAGE ?= $(VE)/bin/coverage
-endif
-
-jenkins: check flake8 test eslint bandit
+jenkins: check flake8 test bandit eslint
 
 $(PY_SENTINAL): $(REQUIREMENTS)
 	rm -rf $(VE)
