@@ -34,7 +34,7 @@ FLAKE8 ?= $(VE)/bin/flake8
 PIP ?= $(VE)/bin/pip
 COVERAGE ?= $(VE)/bin/coverage
 
-jenkins: check flake8 test bandit eslint
+jenkins: check flake8 test bandit
 
 $(PY_SENTINAL): $(REQUIREMENTS)
 	rm -rf $(VE)
