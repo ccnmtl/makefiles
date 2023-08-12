@@ -79,12 +79,4 @@ clean:
 	rm -rf node_modules
 	find . -name '*.pyc' -exec rm {} \;
 
-# run this one the very first time you check
-# this out on a new machine to set up dev
-# database, etc. You probably *DON'T* want
-# to run it after that, though.
-install: jenkins
-	createdb $(APP)
-	make migrate
-
-.PHONY: jenkins test flake8 runserver migrate check shell clean install
+.PHONY: jenkins test flake8 runserver migrate check shell clean
