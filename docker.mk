@@ -12,6 +12,6 @@ docker-shell:
 # Enter an interactive django shell
 docker-django-shell:
 	docker compose run web python manage.py shell_plus \
-		--settings=econplayground.settings_docker
+		--settings=$(APP).settings_docker
 
 .PHONY: docker docker-shell docker-django-shell
