@@ -7,7 +7,7 @@ HUGO ?= `which hugo`
 
 S3CMD ?= s3cmd
 PUBLIC ?= public
-DRAFT_FLAGS ?= --buildDrafts --verboseLog=true -v
+DRAFT_FLAGS ?= --buildDrafts --logLevel info -v
 PROD_FLAGS ?= -s .
 S3_FLAGS ?= --acl-public --delete-removed --no-progress --no-mime-magic --guess-mime-type
 INTERMEDIATE_STEPS ?= echo nothing
