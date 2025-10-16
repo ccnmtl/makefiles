@@ -1,22 +1,23 @@
-# VERSION=1.9.0
+# VERSION=1.10.0
 
 # CHANGES:
-# 1.9.0              - Use coverage tool directly to generate coverage
-#                      reports.
-#                    - wheel and pip updates
-#                    - Use pre-compiled binary wheel for cryptography
-#                    - Remove Travis references
-# 1.8.0 - 2019-10-21 - Don't run flake8 on local_settings.py
-# 1.7.0 - 2018-05-31 - Now using python 3 by default
-#                    - Removed virtualenv.py in favor of python 3's
-#                      builtin venv capability.
-# 1.6.0 - 2017-09-05 - add bandit secure analysis configuration
-# 1.5.0 - 2017-08-24 - remove jshint/jscs in favor of eslint
-# 1.4.0 - 2017-06-06 - backout the switch to eslint. that's not really ready yet.
-# 1.3.0 - 2017-06-05 - pypi location is not needed anymore
-# 1.2.0 - 2016-12-15 - bump wheel version to 0.29
-# 1.1.0 - 2016-11-08 - run flake8 tests before unit tests
-# 1.0.1 - 2016-05-02 - Remove deprecated syncdb command from make install
+# 1.10.0 - 2025-10-16 - Removed coverage, updated dependencies.
+# 1.9.0               - Use coverage tool directly to generate coverage
+#                       reports.
+#                     - wheel and pip updates
+#                     - Use pre-compiled binary wheel for cryptography
+#                     - Remove Travis references
+# 1.8.0  - 2019-10-21 - Don't run flake8 on local_settings.py
+# 1.7.0  - 2018-05-31 - Now using python 3 by default
+#                     - Removed virtualenv.py in favor of python 3's
+#                       builtin venv capability.
+# 1.6.0  - 2017-09-05 - add bandit secure analysis configuration
+# 1.5.0  - 2017-08-24 - remove jshint/jscs in favor of eslint
+# 1.4.0  - 2017-06-06 - backout the switch to eslint. that's not really ready yet.
+# 1.3.0  - 2017-06-05 - pypi location is not needed anymore
+# 1.2.0  - 2016-12-15 - bump wheel version to 0.29
+# 1.1.0  - 2016-11-08 - run flake8 tests before unit tests
+# 1.0.1  - 2016-05-02 - Remove deprecated syncdb command from make install
 
 VE ?= ./ve
 MANAGE ?= ./manage.py
