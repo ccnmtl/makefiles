@@ -63,8 +63,6 @@ Optional:
 * `PIP`, pip command, default `$(VE)/bin/pip`
 * `PY_SENTINAL`, python sentinal location, default `$(VE)/sentinal`
 * `WHEEL_VERSION`, version of python wheel library to install, default `0.24.0`
-* `VIRTUALENV`, location of embedded virtualenv.py, default `virtualenv.py`
-* `SUPPORT_DIR`, directory with support librarires, default `requirements/virtualenv_support/`
 * `MAX_COMPLEXITY`, flake8 max complexity, default 10
 * `INTERFACE`, runserver interface, default `localhost`
 * `RUNSERVER_PORT`, runserver port, default `8000`
