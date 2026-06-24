@@ -76,6 +76,6 @@ clean:
 	rm -rf reports
 	rm -f celerybeat-schedule
 	rm -rf node_modules
-	find . -name '*.pyc' -exec rm {} \;
+	find . -name '*.pyc' -delete
 
 .PHONY: jenkins test flake8 runserver migrate check shell clean
