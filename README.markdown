@@ -8,10 +8,10 @@ To use, copy the relevant files into your project and add a master
 
     APP=myapp
     
-    JS_FILES=media/js/src/ media/js/tests
+    JS_FILES=media/js/src/ media/js/tests/
     MAX_COMPLEXITY=7
     
-    all: jenkins
+    all: test
     
     include *.mk
 
